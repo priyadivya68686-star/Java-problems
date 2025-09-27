@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+
+        // Read the three-digit number
+        int num = sc.nextInt();
+
+        // Extract digits
+        int hundreds = num / 100;
+        int tens = (num / 10) % 10;
+        int units = num % 10;
+
+        // Reverse the number
+        int reversed = units * 100 + tens * 10 + hundreds;
+
+        // Check if reversed number equals original
+        if (num == reversed) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
+  }
+}
