@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class EvenOddChecker {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int number = scanner.nextInt();
+
+
+        if (number < 0 || number > 1000) {
+            System.out.println("Invalid input. Please enter a number between 0 and 1000.");
+        } else {
+
+            int remainder = number % 2;
+            switch (remainder) {
+                case 0:
+                    System.out.println("EVEN");
+                    break;
+                case 1:
+                    System.out.println("ODD");
+                    break;
+            }
+        }
+
+        scanner.close();
+    }
+}  
