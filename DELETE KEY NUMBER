@@ -1,0 +1,26 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();   // e.g. 1738
+        int key = sc.nextInt();   // e.g. 3
+        int rev = 0, p = 1;
+
+        // Reverse first (to keep digit order correct)
+        while (num > 0) {
+            
+            if (num%10 != key)
+            {
+                rev = rev + (num%10)*p;
+                p*=10;
+            }// keep digit if not key
+            num /= 10;
+        }
+
+        // Reverse again to restore order
+        
+
+        System.out.println(rev);
+    }
+}
