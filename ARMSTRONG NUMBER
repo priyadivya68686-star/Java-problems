@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int temp = num, sum = 0;
+
+        // Count the number of digits without using String
+        int digits = 0;
+        int count = num;
+        while (count > 0) {
+            count/= 10;
+            digits++;
+        }
+
+        // Calculate Armstrong sum
+        while (temp > 0) {
+            int digit = temp % 10;
+            sum += Math.pow(digit, digits);
+            temp /= 10;
+        }
+
+        System.out.println(sum == num ? "YES" : "NO");
+    }
+} 
