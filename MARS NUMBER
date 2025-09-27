@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int steps = 0;
+
+        while (n > 9) {  // keep reducing until single digit
+            int sum = 0;
+            while (n > 0) {
+                sum += n % 10;
+                n /= 10;
+            }
+            n = sum;
+            steps++;
+        }
+
+        if (steps % 2 == 0)
+            System.out.println("YES");
+        else
+            System.out.println("NO");
+    }
+} 
