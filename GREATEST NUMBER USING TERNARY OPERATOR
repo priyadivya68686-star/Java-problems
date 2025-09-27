@@ -1,0 +1,10 @@
+import java. util.*;
+public class Main {
+public static void main(String args[]){
+int a = 34;
+int b = 56;
+int c = 12;
+int greatest = (a > b) ? ((a>c)? a:c):((b>c)? b:c);
+System.out.println ("Greatest is: "+ greatest);
+}
+}
