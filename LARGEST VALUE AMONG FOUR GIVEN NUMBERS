@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner s = new Scanner(System.in);
+      int a = s.nextInt();
+      int b = s.nextInt();
+      int c = s.nextInt();
+      int d = s.nextInt();
+      
+      
+      System.out.println((a>b&&a>c&&a>d)?a:(b>a&&b>c&&b>d)?b:(c>a&&c>b&&c>d)?c:d);
+  }
+}
