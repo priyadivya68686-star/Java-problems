@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+
+        // Read three angles
+        int A = sc.nextInt();
+        int B = sc.nextInt();
+        int C = sc.nextInt();
+
+        // Check if the angles form a valid triangle
+        if (A > 0 && B > 0 && C > 0 && (A + B + C == 180)) {
+            System.out.println("VALID");
+
+            // Determine the type of triangle
+            if (A == B && B == C) {
+                System.out.println("EQUILATERAL");
+            } else if (A == B || B == C || A == C) {
+                System.out.println("ISOSCELES");
+            } else {
+                System.out.println("SCALENE");
+            }
+
+        } else {
+            System.out.println("NOT VALID");
+            System.out.println();
+        }
+  }
+}
